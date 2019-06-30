@@ -1,39 +1,46 @@
 {
-  "name": "beziyay",
-  "version": "0.0.1",
-  "description": "line smoothing via efficient curve fitting",
-  "main": "main.js",
-  "directories": {
-    "example": "example"
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-typescript": "^7.3.3",
-    "@types/jest": "^24.0.15",
-    "babel-jest": "^24.8.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "typescript": "^3.4.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/loc/beziyay.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/loc/beziyay/issues"
-  },
-  "homepage": "https://github.com/loc/beziyay#readme"
+    "name": "beziyay",
+    "version": "0.0.1",
+    "description": "line smoothing via efficient curve fitting",
+    "main": "dist/main.js",
+    "types": "dist/main.d.ts",
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^1.11.0",
+        "@typescript-eslint/parser": "^1.11.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "@babel/preset-typescript": "^7.3.3",
+        "@types/jest": "^24.0.15",
+        "babel-jest": "^24.8.0",
+        "eslint": "^5.16.0",
+        "eslint-config-prettier": "^6.0.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "jest": "^24.8.0",
+        "prettier": "^1.18.2",
+        "typescript": "^3.4.5"
+    },
+    "scripts": {
+        "build": "tsc",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint --ext .ts src/",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "test": "jest",
+        "prepublishOnly": "npm test && npm run lint && npm run typecheck",
+        "prepare": "npm run build",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/loc/beziyay.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/loc/beziyay/issues"
+    },
+    "homepage": "https://github.com/loc/beziyay#readme"
 }
