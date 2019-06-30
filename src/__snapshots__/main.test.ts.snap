@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fits curves deterministically 1`] = `
+Object {
+  "c0": Object {
+    "x": 1175,
+    "y": 591,
+  },
+  "c1": Object {
+    "x": 1173.6174458294495,
+    "y": 641.3012893215177,
+  },
+  "c2": Object {
+    "x": 1028.986058413687,
+    "y": 653.0792674021842,
+  },
+  "c3": Object {
+    "x": 980,
+    "y": 644,
+  },
+  "constrain_to": Object {
+    "x": 0.027475085811772937,
+    "y": -0.9996224885723789,
+  },
+  "error": 1.7777777777777777,
+  "steps": 2,
+  "update_status": 1,
+}
+`;
+
+exports[`fits curves deterministically 2`] = `
+Object {
+  "c0": Object {
+    "x": 422,
+    "y": 437,
+  },
+  "c1": Object {
+    "x": 422.86331748854144,
+    "y": 452.19089058790246,
+  },
+  "c2": Object {
+    "x": 455.35708049812587,
+    "y": 588.5082980928452,
+  },
+  "c3": Object {
+    "x": 466,
+    "y": 603,
+  },
+  "constrain_to": Object {
+    "x": -0.05673970749254529,
+    "y": -0.9983890051446181,
+  },
+  "error": 0.8888888888888888,
+  "steps": 1,
+  "update_status": 1,
+}
+`;
+
+exports[`fits curves deterministically 3`] = `
+Object {
+  "c0": Object {
+    "x": 1004,
+    "y": 612,
+  },
+  "c1": Object {
+    "x": 1018.3229152171343,
+    "y": 599.969475275129,
+  },
+  "c2": Object {
+    "x": 1120.2585901495684,
+    "y": 515.6345866341494,
+  },
+  "c3": Object {
+    "x": 1137,
+    "y": 506,
+  },
+  "constrain_to": Object {
+    "x": -0.7657239285382756,
+    "y": 0.6431693908014511,
+  },
+  "error": 0.4444444444444444,
+  "steps": 1,
+  "update_status": 1,
+}
+`;
